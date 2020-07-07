@@ -15,4 +15,5 @@ struct Group: Identifiable, Hashable {
     let name: String
     let currencies: [String]
     let members: [User]
+    let debts: [Debt]
 }

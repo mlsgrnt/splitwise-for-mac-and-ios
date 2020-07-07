@@ -42,6 +42,7 @@ struct PrefView: View {
             backing: .buffered, defer: false)
         window.title = "Preferences"
         window.contentView = NSHostingView(rootView: self)
+        window.center()
         window.makeKeyAndOrderFront(nil)
     }
     

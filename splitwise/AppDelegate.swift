@@ -61,5 +61,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             prefView = PrefView(splitwiseModel: splitwiseModel)
         }
     }
+    
+    // MARK: Open web app
+    
+    // In future, would be cool to open up right to the active group!
+    // TODO
+    @IBAction func openWebApp(_ sender: Any) {
+        let url = URL(string: "https://secure.splitwise.com")!
+        _ = NSWorkspace.shared.open(url)
+    }
 }
 

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02E89B1124B4BCA4007CF587 /* Debt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E89B1024B4BCA4007CF587 /* Debt.swift */; };
+		02E89B1324B4BF22007CF587 /* DebtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E89B1224B4BF22007CF587 /* DebtView.swift */; };
+		02E89B1524B4C3CC007CF587 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E89B1424B4C3CC007CF587 /* Helpers.swift */; };
 		02EC2B1024B47A7B006486AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC2B0F24B47A7B006486AC /* AppDelegate.swift */; };
 		02EC2B1224B47A7B006486AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC2B1124B47A7B006486AC /* ContentView.swift */; };
 		02EC2B1424B47A80006486AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02EC2B1324B47A80006486AC /* Assets.xcassets */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02E89B1024B4BCA4007CF587 /* Debt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debt.swift; sourceTree = "<group>"; };
+		02E89B1224B4BF22007CF587 /* DebtView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtView.swift; sourceTree = "<group>"; };
+		02E89B1424B4C3CC007CF587 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		02EC2B0C24B47A7B006486AC /* splitwise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = splitwise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02EC2B0F24B47A7B006486AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02EC2B1124B47A7B006486AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +84,7 @@
 				02EC2B3924B4A77D006486AC /* Views */,
 				02EC2B2824B47BB9006486AC /* Models */,
 				02EC2B0F24B47A7B006486AC /* AppDelegate.swift */,
+				02E89B1424B4C3CC007CF587 /* Helpers.swift */,
 				02EC2B1324B47A80006486AC /* Assets.xcassets */,
 				02EC2B1824B47A80006486AC /* Main.storyboard */,
 				02EC2B1B24B47A80006486AC /* Info.plist */,
@@ -101,6 +108,7 @@
 				02EC2B2924B47BD0006486AC /* SplitwiseNetworking.swift */,
 				02EC2B2B24B47BE3006486AC /* SplitwiseModel.swift */,
 				02EC2B2D24B47C27006486AC /* Group.swift */,
+				02E89B1024B4BCA4007CF587 /* Debt.swift */,
 				02EC2B2F24B47C2F006486AC /* User.swift */,
 			);
 			path = Models;
@@ -122,6 +130,7 @@
 		02EC2B3A24B4A78B006486AC /* Group Detail Subviews */ = {
 			isa = PBXGroup;
 			children = (
+				02E89B1224B4BF22007CF587 /* DebtView.swift */,
 			);
 			path = "Group Detail Subviews";
 			sourceTree = "<group>";
@@ -208,13 +217,16 @@
 				02EC2B2C24B47BE3006486AC /* SplitwiseModel.swift in Sources */,
 				02EC2B1224B47A7B006486AC /* ContentView.swift in Sources */,
 				02EC2B3424B48FE0006486AC /* GroupListView.swift in Sources */,
+				02E89B1124B4BCA4007CF587 /* Debt.swift in Sources */,
 				02EC2B3024B47C2F006486AC /* User.swift in Sources */,
 				02EC2B1024B47A7B006486AC /* AppDelegate.swift in Sources */,
 				02EC2B3824B4A350006486AC /* PrefView.swift in Sources */,
 				02EC2B3624B48FFD006486AC /* GroupDetailView.swift in Sources */,
 				02EC2B2E24B47C27006486AC /* Group.swift in Sources */,
 				02EC2B2A24B47BD0006486AC /* SplitwiseNetworking.swift in Sources */,
+				02E89B1524B4C3CC007CF587 /* Helpers.swift in Sources */,
 				02EC2B3224B48AAC006486AC /* LoggedInView.swift in Sources */,
+				02E89B1324B4BF22007CF587 /* DebtView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

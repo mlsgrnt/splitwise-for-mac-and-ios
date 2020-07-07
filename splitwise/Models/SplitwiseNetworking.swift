@@ -106,14 +106,6 @@ class SplitwiseNetworking {
                     let groupName = groupJSON["name"].stringValue
                     let groupMembersJSON = groupJSON["members"].arrayValue
                     
-                    var currencies = [String]()
-                    let originalDeptsJSON = groupJSON["original_debts"].arrayValue
-                    for originalDeptJSON in originalDeptsJSON {
-                        let currency = originalDeptJSON["currency_code"].stringValue
-                        if (!currencies.contains { $0 == currency}) {
-                            currencies.append(currency)
-                        }
-                    }
                     
                     var members = [User]()
                     for groupMemberJSON in groupMembersJSON {
@@ -127,7 +119,30 @@ class SplitwiseNetworking {
                         members.append(member)
                     }
                     
-                    let group = Group(id: groupId, name: groupName, currencies: currencies, members: members)
+                    var currencies = [String]()
+                    let originalDeptsJSON = groupJSON["original_debts"].arrayValue
+                    var debts = [Debt]()
+                    for originalDeptJSON in originalDeptsJSON {
+                        
+                        let currency = originalDeptJSON["currency_code"].stringValue
+                        if (!currencies.contains { $0 == currency}) {
+                            currencies.append(currency)
+                        }
+                        
+                        // Debt creation
+                        let fromSafe = members.first { (user) -> Bool in
+                            return user.id == originalDeptJSON["from"].intValue
+                        }
+                        let toSafe = members.first { (user) -> Bool in
+                            return user.id == originalDeptJSON["to"].intValue
+                        }
+                        if let from = fromSafe, let to = toSafe {
+                            let amount = originalDeptJSON["amount"].doubleValue
+                            debts.append(Debt(from: from, to: to, amount: amount))
+                        }
+                    }
+                    
+                    let group = Group(id: groupId, name: groupName, currencies: currencies, members: members, debts: debts)
                     groups.append(group)
                 }
                 success(groups)
