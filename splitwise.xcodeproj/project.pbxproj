@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,16 @@
 		02EC2B1424B47A80006486AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02EC2B1324B47A80006486AC /* Assets.xcassets */; };
 		02EC2B1724B47A80006486AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02EC2B1624B47A80006486AC /* Preview Assets.xcassets */; };
 		02EC2B1A24B47A80006486AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02EC2B1824B47A80006486AC /* Main.storyboard */; };
+		02EC2B2424B47B7A006486AC /* OAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 02EC2B2324B47B7A006486AC /* OAuthSwift */; };
+		02EC2B2724B47B94006486AC /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 02EC2B2624B47B94006486AC /* SwiftyJSON */; };
+		02EC2B2A24B47BD0006486AC /* SplitwiseNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC2B2924B47BD0006486AC /* SplitwiseNetworking.swift */; };
+		02EC2B2C24B47BE3006486AC /* SplitwiseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC2B2B24B47BE3006486AC /* SplitwiseModel.swift */; };
+		02EC2B2E24B47C27006486AC /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC2B2D24B47C27006486AC /* Group.swift */; };
+		02EC2B3024B47C2F006486AC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC2B2F24B47C2F006486AC /* User.swift */; };
+		02EC2B3224B48AAC006486AC /* LoggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC2B3124B48AAC006486AC /* LoggedInView.swift */; };
+		02EC2B3424B48FE0006486AC /* GroupListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC2B3324B48FE0006486AC /* GroupListView.swift */; };
+		02EC2B3624B48FFD006486AC /* GroupDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC2B3524B48FFD006486AC /* GroupDetailView.swift */; };
+		02EC2B3824B4A350006486AC /* PrefView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC2B3724B4A350006486AC /* PrefView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +33,14 @@
 		02EC2B1924B47A80006486AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		02EC2B1B24B47A80006486AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02EC2B1C24B47A80006486AC /* splitwise.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = splitwise.entitlements; sourceTree = "<group>"; };
+		02EC2B2924B47BD0006486AC /* SplitwiseNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitwiseNetworking.swift; sourceTree = "<group>"; };
+		02EC2B2B24B47BE3006486AC /* SplitwiseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitwiseModel.swift; sourceTree = "<group>"; };
+		02EC2B2D24B47C27006486AC /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		02EC2B2F24B47C2F006486AC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		02EC2B3124B48AAC006486AC /* LoggedInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInView.swift; sourceTree = "<group>"; };
+		02EC2B3324B48FE0006486AC /* GroupListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListView.swift; sourceTree = "<group>"; };
+		02EC2B3524B48FFD006486AC /* GroupDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailView.swift; sourceTree = "<group>"; };
+		02EC2B3724B4A350006486AC /* PrefView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +48,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02EC2B2724B47B94006486AC /* SwiftyJSON in Frameworks */,
+				02EC2B2424B47B7A006486AC /* OAuthSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,8 +75,9 @@
 		02EC2B0E24B47A7B006486AC /* splitwise */ = {
 			isa = PBXGroup;
 			children = (
+				02EC2B3924B4A77D006486AC /* Views */,
+				02EC2B2824B47BB9006486AC /* Models */,
 				02EC2B0F24B47A7B006486AC /* AppDelegate.swift */,
-				02EC2B1124B47A7B006486AC /* ContentView.swift */,
 				02EC2B1324B47A80006486AC /* Assets.xcassets */,
 				02EC2B1824B47A80006486AC /* Main.storyboard */,
 				02EC2B1B24B47A80006486AC /* Info.plist */,
@@ -72,6 +93,37 @@
 				02EC2B1624B47A80006486AC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		02EC2B2824B47BB9006486AC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				02EC2B2924B47BD0006486AC /* SplitwiseNetworking.swift */,
+				02EC2B2B24B47BE3006486AC /* SplitwiseModel.swift */,
+				02EC2B2D24B47C27006486AC /* Group.swift */,
+				02EC2B2F24B47C2F006486AC /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		02EC2B3924B4A77D006486AC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				02EC2B3A24B4A78B006486AC /* Group Detail Subviews */,
+				02EC2B3724B4A350006486AC /* PrefView.swift */,
+				02EC2B1124B47A7B006486AC /* ContentView.swift */,
+				02EC2B3124B48AAC006486AC /* LoggedInView.swift */,
+				02EC2B3324B48FE0006486AC /* GroupListView.swift */,
+				02EC2B3524B48FFD006486AC /* GroupDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		02EC2B3A24B4A78B006486AC /* Group Detail Subviews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Group Detail Subviews";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,6 +142,10 @@
 			dependencies = (
 			);
 			name = splitwise;
+			packageProductDependencies = (
+				02EC2B2324B47B7A006486AC /* OAuthSwift */,
+				02EC2B2624B47B94006486AC /* SwiftyJSON */,
+			);
 			productName = splitwise;
 			productReference = 02EC2B0C24B47A7B006486AC /* splitwise.app */;
 			productType = "com.apple.product-type.application";
@@ -118,6 +174,10 @@
 				Base,
 			);
 			mainGroup = 02EC2B0324B47A7B006486AC;
+			packageReferences = (
+				02EC2B2224B47B7A006486AC /* XCRemoteSwiftPackageReference "OAuthSwift" */,
+				02EC2B2524B47B94006486AC /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 02EC2B0D24B47A7B006486AC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -145,8 +205,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02EC2B2C24B47BE3006486AC /* SplitwiseModel.swift in Sources */,
 				02EC2B1224B47A7B006486AC /* ContentView.swift in Sources */,
+				02EC2B3424B48FE0006486AC /* GroupListView.swift in Sources */,
+				02EC2B3024B47C2F006486AC /* User.swift in Sources */,
 				02EC2B1024B47A7B006486AC /* AppDelegate.swift in Sources */,
+				02EC2B3824B4A350006486AC /* PrefView.swift in Sources */,
+				02EC2B3624B48FFD006486AC /* GroupDetailView.swift in Sources */,
+				02EC2B2E24B47C27006486AC /* Group.swift in Sources */,
+				02EC2B2A24B47BD0006486AC /* SplitwiseNetworking.swift in Sources */,
+				02EC2B3224B48AAC006486AC /* LoggedInView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +413,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		02EC2B2224B47B7A006486AC /* XCRemoteSwiftPackageReference "OAuthSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OAuthSwift/OAuthSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.2;
+			};
+		};
+		02EC2B2524B47B94006486AC /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		02EC2B2324B47B7A006486AC /* OAuthSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02EC2B2224B47B7A006486AC /* XCRemoteSwiftPackageReference "OAuthSwift" */;
+			productName = OAuthSwift;
+		};
+		02EC2B2624B47B94006486AC /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02EC2B2524B47B94006486AC /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 02EC2B0424B47A7B006486AC /* Project object */;
 }
