@@ -45,8 +45,8 @@ struct GroupDetailView: View {
             
             
             Divider()
-            if group != nil && (splitwiseModel.expenses[group!.id] != nil) {
-                ExpensesTableView(expenses: splitwiseModel.expenses[group!.id]!)
+            if group != nil && (splitwiseModel.expenses[group!.id] != nil) && group!.debts.count > 0 {
+                ExpensesTableView(expenses: splitwiseModel.expenses[group!.id]!, inDebt: group!.debts[0].from == splitwiseModel.user)
             }
             
             Spacer()

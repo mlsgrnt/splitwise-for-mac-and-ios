@@ -13,6 +13,7 @@
 		02E89B1724B4D065007CF587 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E89B1624B4D065007CF587 /* Expense.swift */; };
 		02E89B1924B4DCAB007CF587 /* ExpensesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E89B1824B4DCAB007CF587 /* ExpensesTableView.swift */; };
 		02E89B1D24B4E82B007CF587 /* ExpenseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E89B1C24B4E82B007CF587 /* ExpenseRow.swift */; };
+		02E89B1F24B4F720007CF587 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E89B1E24B4F720007CF587 /* TestView.swift */; };
 		02EC2B1024B47A7B006486AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC2B0F24B47A7B006486AC /* AppDelegate.swift */; };
 		02EC2B1224B47A7B006486AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC2B1124B47A7B006486AC /* ContentView.swift */; };
 		02EC2B1424B47A80006486AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02EC2B1324B47A80006486AC /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 		02E89B1624B4D065007CF587 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		02E89B1824B4DCAB007CF587 /* ExpensesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesTableView.swift; sourceTree = "<group>"; };
 		02E89B1C24B4E82B007CF587 /* ExpenseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseRow.swift; sourceTree = "<group>"; };
+		02E89B1E24B4F720007CF587 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		02EC2B0C24B47A7B006486AC /* splitwise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = splitwise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02EC2B0F24B47A7B006486AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02EC2B1124B47A7B006486AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			children = (
 				02E89B1224B4BF22007CF587 /* DebtView.swift */,
 				02E89B1824B4DCAB007CF587 /* ExpensesTableView.swift */,
+				02E89B1E24B4F720007CF587 /* TestView.swift */,
 				02E89B1C24B4E82B007CF587 /* ExpenseRow.swift */,
 			);
 			path = "Group Detail Subviews";
@@ -231,6 +234,7 @@
 				02EC2B3024B47C2F006486AC /* User.swift in Sources */,
 				02EC2B1024B47A7B006486AC /* AppDelegate.swift in Sources */,
 				02EC2B3824B4A350006486AC /* PrefView.swift in Sources */,
+				02E89B1F24B4F720007CF587 /* TestView.swift in Sources */,
 				02EC2B3624B48FFD006486AC /* GroupDetailView.swift in Sources */,
 				02EC2B2E24B47C27006486AC /* Group.swift in Sources */,
 				02EC2B2A24B47BD0006486AC /* SplitwiseNetworking.swift in Sources */,

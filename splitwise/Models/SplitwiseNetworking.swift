@@ -186,6 +186,12 @@ class SplitwiseNetworking {
                     // MORE ASSUMPTION!!!! TODO TODO
                     // assumes only one repayment.
                     // will break if many people involved
+                    
+                    // Check assumption holds
+                    if expenseJSON["repayments"].arrayValue.count != 1 {
+                        continue
+                    }
+                    
                     let repayment = expenseJSON["repayments"].arrayValue[0]
                     let to = repayment["to"].intValue
                     let from = repayment["from"].intValue

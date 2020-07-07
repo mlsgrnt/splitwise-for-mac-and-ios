@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+// TODO: Some more prefernces would be cool. Like an option to show payments
 struct PrefView: View {
     @ObservedObject var splitwiseModel: SplitwiseModel;
     // Used to know if the window is open

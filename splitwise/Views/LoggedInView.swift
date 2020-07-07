@@ -19,7 +19,6 @@ struct LoggedInView: View {
             GroupListView(groups: groups ?? [], selectedGroup: $selectedGroup)
             GroupDetailView(group: selectedGroup)
         }
-        .navigationViewStyle(DoubleColumnNavigationViewStyle())
         .frame(maxWidth: .infinity,maxHeight: .infinity)
         // Cool big sur style
         .edgesIgnoringSafeArea(.all)

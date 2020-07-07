@@ -21,16 +21,30 @@ func filterToOnlyShowOwed(expenses: [Expense]/*, user: User?*/) -> [Expense] {
 
 struct ExpensesTableView: View {
     let expenses: [Expense]
+    let inDebt: Bool
     @EnvironmentObject var splitwiseModel: SplitwiseModel
-
+    
     
     var body: some View {
         VStack(alignment: .leading){
-            Text("Expenses")
-                .font(.headline)
-                .fontWeight(.bold)
-                .padding(.leading, 15.0)
-                .padding(.bottom, -5.0)
+            HStack(alignment: .center) {
+                Text("Expenses")
+                    .font(.headline)
+                    .fontWeight(.bold)
+                
+                Spacer()
+                if inDebt {
+                    Button(action:{}) {
+                        Text("Settle Up")
+                    }
+                }
+                Button(action: {}) {
+                    Text("+")
+                }
+            }
+            .padding(.leading, 15.0)
+            .padding(.trailing, 15.0)
+            .padding(.bottom, -5.0)
             
             if expenses.endIndex == 0 {
                 Text("No expenses yet!")
@@ -38,7 +52,7 @@ struct ExpensesTableView: View {
             } else {
                 List(){
                     ForEach(filterToOnlyShowOwed(expenses: expenses/*, user: splitwiseModel.user*/)) { expense in
-                            ExpenseRow(expense: expense)
+                        ExpenseRow(expense: expense)
                     }
                 }
             }
@@ -50,6 +64,6 @@ struct ExpensesTableView: View {
 
 struct ExpensesTableView_Previews: PreviewProvider {
     static var previews: some View {
-        ExpensesTableView(expenses: [Expense(id: 1, date: Date(), cost: 12.0, repayment: Debt(from: User(id: 1, firstName: "s", lastName: "s", email: "s", defaultCurrency: "s"), to: User(id: 2, firstName: "s", lastName: "s", email: "s", defaultCurrency: "s"), amount: 12.3), description: "woooo", paid: true)])
+        ExpensesTableView(expenses: [Expense(id: 1, date: Date(), cost: 12.0, repayment: Debt(from: User(id: 1, firstName: "s", lastName: "s", email: "s", defaultCurrency: "s"), to: User(id: 2, firstName: "s", lastName: "s", email: "s", defaultCurrency: "s"), amount: 12.3), description: "woooo", paid: true)], inDebt: true)
     }
 }
