@@ -31,7 +31,7 @@ struct GroupDetailView: View {
                             }
                             Spacer()
                         }
-                        .padding([.top], 5.0)
+                        .padding([.top], 10.0)
                     }
                     
                 }
@@ -41,16 +41,23 @@ struct GroupDetailView: View {
                     }
                 }
                 
-            }.padding([.top, .leading, .trailing], 10.0)
+            }.padding([.top, .leading, .trailing], 15.0)
             
             
             Divider()
-            Text("hmm")
-            
+            if group != nil && (splitwiseModel.expenses[group!.id] != nil) {
+                ExpensesTableView(expenses: splitwiseModel.expenses[group!.id]!)
+            }
             
             Spacer()
             
-        }.frame(minWidth: 500, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
+        }
+        .frame(minWidth: 500, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
+        .onAppear() {
+            if let group = self.group {
+                self.splitwiseModel.loadExpenses(group: group)
+            }
+        }
     }
 }
 

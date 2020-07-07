@@ -12,6 +12,7 @@ class SplitwiseModel: ObservableObject {
     fileprivate let splitwiseNetworking: SplitwiseNetworking
     @Published var user: User?
     @Published var groups: [Group]?
+    @Published var expenses = [Int: [Expense]]() // Not the perfect way to do it, but works.
     
     @Published var loggedIn: Bool! {
         didSet {
@@ -67,6 +68,25 @@ class SplitwiseModel: ObservableObject {
             self.groups = groups
         }) { (err: String) in
             print(err)
+        }
+    }
+    
+    func loadExpenses(group: Group) {
+        // Doing some messy array stuff here. Not sure how Swift works well enough to do this well...
+        // Originally I wanted expenses to be inside of Group... :(
+        
+        // See if we've seen it before
+        if self.expenses[group.id] != nil {
+            // We already grabbed these expenses, so do nothing.
+            print("We already grabbed expenses for \(group.name)")
+            return
+        }
+        
+        // After all this finally we can grab
+        splitwiseNetworking.HttpGetExpenses(group: group, success: { (expenses: [Expense]) in
+            self.expenses[group.id] = expenses
+        }) { (errr: String) in
+            print(errr)
         }
     }
     

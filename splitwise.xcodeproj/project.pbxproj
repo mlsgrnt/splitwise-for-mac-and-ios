@@ -10,6 +10,9 @@
 		02E89B1124B4BCA4007CF587 /* Debt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E89B1024B4BCA4007CF587 /* Debt.swift */; };
 		02E89B1324B4BF22007CF587 /* DebtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E89B1224B4BF22007CF587 /* DebtView.swift */; };
 		02E89B1524B4C3CC007CF587 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E89B1424B4C3CC007CF587 /* Helpers.swift */; };
+		02E89B1724B4D065007CF587 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E89B1624B4D065007CF587 /* Expense.swift */; };
+		02E89B1924B4DCAB007CF587 /* ExpensesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E89B1824B4DCAB007CF587 /* ExpensesTableView.swift */; };
+		02E89B1D24B4E82B007CF587 /* ExpenseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E89B1C24B4E82B007CF587 /* ExpenseRow.swift */; };
 		02EC2B1024B47A7B006486AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC2B0F24B47A7B006486AC /* AppDelegate.swift */; };
 		02EC2B1224B47A7B006486AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC2B1124B47A7B006486AC /* ContentView.swift */; };
 		02EC2B1424B47A80006486AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02EC2B1324B47A80006486AC /* Assets.xcassets */; };
@@ -31,6 +34,9 @@
 		02E89B1024B4BCA4007CF587 /* Debt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debt.swift; sourceTree = "<group>"; };
 		02E89B1224B4BF22007CF587 /* DebtView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtView.swift; sourceTree = "<group>"; };
 		02E89B1424B4C3CC007CF587 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		02E89B1624B4D065007CF587 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		02E89B1824B4DCAB007CF587 /* ExpensesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesTableView.swift; sourceTree = "<group>"; };
+		02E89B1C24B4E82B007CF587 /* ExpenseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseRow.swift; sourceTree = "<group>"; };
 		02EC2B0C24B47A7B006486AC /* splitwise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = splitwise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02EC2B0F24B47A7B006486AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02EC2B1124B47A7B006486AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +116,7 @@
 				02EC2B2D24B47C27006486AC /* Group.swift */,
 				02E89B1024B4BCA4007CF587 /* Debt.swift */,
 				02EC2B2F24B47C2F006486AC /* User.swift */,
+				02E89B1624B4D065007CF587 /* Expense.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -131,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				02E89B1224B4BF22007CF587 /* DebtView.swift */,
+				02E89B1824B4DCAB007CF587 /* ExpensesTableView.swift */,
+				02E89B1C24B4E82B007CF587 /* ExpenseRow.swift */,
 			);
 			path = "Group Detail Subviews";
 			sourceTree = "<group>";
@@ -214,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02E89B1724B4D065007CF587 /* Expense.swift in Sources */,
 				02EC2B2C24B47BE3006486AC /* SplitwiseModel.swift in Sources */,
 				02EC2B1224B47A7B006486AC /* ContentView.swift in Sources */,
 				02EC2B3424B48FE0006486AC /* GroupListView.swift in Sources */,
@@ -224,8 +234,10 @@
 				02EC2B3624B48FFD006486AC /* GroupDetailView.swift in Sources */,
 				02EC2B2E24B47C27006486AC /* Group.swift in Sources */,
 				02EC2B2A24B47BD0006486AC /* SplitwiseNetworking.swift in Sources */,
+				02E89B1D24B4E82B007CF587 /* ExpenseRow.swift in Sources */,
 				02E89B1524B4C3CC007CF587 /* Helpers.swift in Sources */,
 				02EC2B3224B48AAC006486AC /* LoggedInView.swift in Sources */,
+				02E89B1924B4DCAB007CF587 /* ExpensesTableView.swift in Sources */,
 				02E89B1324B4BF22007CF587 /* DebtView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

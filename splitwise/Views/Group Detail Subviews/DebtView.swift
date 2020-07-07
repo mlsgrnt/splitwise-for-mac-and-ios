@@ -71,9 +71,9 @@ struct DebtView: View {
                 .font(.headline)
                 .padding(.horizontal, 10.0)
                 .padding(.vertical, 10.0)
-                .background(Color(red: 0.3, green: 0.3, blue: 0.3, opacity: 0.2))
+                .background(Color(red: 0.3, green: 0.3, blue: 0.3, opacity: 0.5))
                 .cornerRadius(5.0)
-                .foregroundColor(Color(red: 0.0, green: 0.0, blue: 0.0, opacity: 0.9))
+                .foregroundColor(Color(red: 1.0, green: 1.0, blue: 1.0, opacity: 0.9))
         }
     }
     

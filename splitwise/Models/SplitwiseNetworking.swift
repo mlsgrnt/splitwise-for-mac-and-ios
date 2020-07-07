@@ -151,4 +151,70 @@ class SplitwiseNetworking {
             }
         }
     }
+    func HttpGetExpenses(group: Group, success: @escaping ([Expense]) -> Void, failure: @escaping (String) -> Void) {
+        guard let client = self.client else {
+            failure("Not authorized. Call authorize(...) before using")
+            return
+        }
+        
+        // TODO: Customize limit/allow to get older entries
+        client.get("https://secure.splitwise.com/api/v3.0/get_expenses?limit=50&group_id=\(group.id)") { result in
+            switch result {
+            case .success(let response):
+                let responseJSON = JSON(parseJSON: response.dataString() ?? "")
+                let expensesJSON = responseJSON["expenses"].arrayValue
+                var expenses = [Expense]()
+                
+                for expenseJSON in expensesJSON {
+                    // Ignore deleted
+                    let deletedAt = expenseJSON["deleted_at"].stringValue
+                    if deletedAt != "" {
+                        continue
+                    }
+                    
+                    // Basics
+                    let expenseId = expenseJSON["id"].intValue
+                    let expenseCost = expenseJSON["cost"].doubleValue
+                    let expenseDateString = expenseJSON["date"].stringValue
+                    let expenseDescription = expenseJSON["description"].stringValue
+                    let expensePaid = expenseJSON["payment"].boolValue
+                    
+                    // Get the date
+                    let dateFormatter = ISO8601DateFormatter()
+                    let expenseDate = dateFormatter.date(from:expenseDateString)!
+
+                    // MORE ASSUMPTION!!!! TODO TODO
+                    // assumes only one repayment.
+                    // will break if many people involved
+                    let repayment = expenseJSON["repayments"].arrayValue[0]
+                    let to = repayment["to"].intValue
+                    let from = repayment["from"].intValue
+                    let amount = repayment["amount"].doubleValue
+                    
+                    // Find users involved
+                    let toUser = group.members.first { (user) -> Bool in
+                        return user.id == to
+                    }
+                    let fromUser = group.members.first { (user) -> Bool in
+                        return user.id == from
+                    }
+                    
+                    if toUser == nil || fromUser == nil {
+                        return // Something went really wrong, let's quit
+                    }
+                    
+                    let debt = Debt(from: fromUser!, to: toUser!, amount: amount)
+                 
+                    // Finally!
+                    let expense = Expense(id: expenseId, date: expenseDate, cost: expenseCost, repayment: debt, description: expenseDescription, paid: expensePaid)
+                    expenses.append(expense)
+                }
+                success(expenses)
+                
+            case .failure(let error):
+                failure(error.localizedDescription)
+            }
+            
+        }
+    }
 }

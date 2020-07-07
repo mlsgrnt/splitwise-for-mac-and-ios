@@ -8,6 +8,10 @@
 // Thank you https://github.com/janwasgint/Cupwise for some of this
 
 struct User: Identifiable, Hashable {
+    static func == (lhs: User, rhs: User) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
     let id: Int
     let firstName: String
     let lastName: String
