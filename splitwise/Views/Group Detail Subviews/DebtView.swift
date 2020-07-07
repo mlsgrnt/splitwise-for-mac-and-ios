@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-
+// This file could use some rewriting. Part of the problem is the bad 2-user assumtion.
 
 fileprivate func getBalance(debts: [Debt], myUserId: Int) -> Double {
     var balance = 0.0

@@ -21,7 +21,10 @@ func filterToOnlyShowOwed(expenses: [Expense]/*, user: User?*/) -> [Expense] {
 
 struct ExpensesTableView: View {
     let expenses: [Expense]
-    let inDebt: Bool
+    let debt: Double
+    let group: Group?
+    
+    @State var settleUpViewVisible = false
     @EnvironmentObject var splitwiseModel: SplitwiseModel
     
     
@@ -33,8 +36,10 @@ struct ExpensesTableView: View {
                     .fontWeight(.bold)
                 
                 Spacer()
-                if inDebt {
-                    Button(action:{}) {
+                if debt < 0 {
+                    Button(action:{
+                        self.settleUpViewVisible = true
+                    }) {
                         Text("Settle Up")
                     }
                 }
@@ -57,13 +62,10 @@ struct ExpensesTableView: View {
                 }
             }
         }
+        .sheet(isPresented: $settleUpViewVisible) {
+            SettleUpView(group: self.group, isVisible: self.$settleUpViewVisible, amountSent: self.debt).environmentObject(self.splitwiseModel)
+         }
         
         
-    }
-}
-
-struct ExpensesTableView_Previews: PreviewProvider {
-    static var previews: some View {
-        ExpensesTableView(expenses: [Expense(id: 1, date: Date(), cost: 12.0, repayment: Debt(from: User(id: 1, firstName: "s", lastName: "s", email: "s", defaultCurrency: "s"), to: User(id: 2, firstName: "s", lastName: "s", email: "s", defaultCurrency: "s"), amount: 12.3), description: "woooo", paid: true)], inDebt: true)
     }
 }

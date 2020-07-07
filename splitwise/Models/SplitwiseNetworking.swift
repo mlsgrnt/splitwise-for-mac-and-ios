@@ -182,7 +182,7 @@ class SplitwiseNetworking {
                     // Get the date
                     let dateFormatter = ISO8601DateFormatter()
                     let expenseDate = dateFormatter.date(from:expenseDateString)!
-
+                    
                     // MORE ASSUMPTION!!!! TODO TODO
                     // assumes only one repayment.
                     // will break if many people involved
@@ -210,7 +210,7 @@ class SplitwiseNetworking {
                     }
                     
                     let debt = Debt(from: fromUser!, to: toUser!, amount: amount)
-                 
+                    
                     // Finally!
                     let expense = Expense(id: expenseId, date: expenseDate, cost: expenseCost, repayment: debt, description: expenseDescription, paid: expensePaid)
                     expenses.append(expense)
@@ -221,6 +221,52 @@ class SplitwiseNetworking {
                 failure(error.localizedDescription)
             }
             
+        }
+    }
+    
+    func httpPostSettleUp(fullAmount: Double, group: Group, user: User, success: @escaping () -> Void, failure: @escaping (String) -> Void) {
+        guard let client = self.client else {
+            failure("Not authorized. Call authorize(...) before using")
+            return
+        }
+        
+        // Find the id of the other person
+        let otherUserWrapped = group.members.first { (u) -> Bool in
+            return u != user
+        }
+        
+        guard let otherUser = otherUserWrapped else {
+            // Didn't work, guess that's a fail
+            return
+        }
+        
+        // Make amount usable
+        let amount = abs(fullAmount)
+        
+        let parameters: OAuthSwift.Parameters = [
+            "payment" : String(true),
+            "cost" : String(amount),
+            "description" : "Settled Up",
+            "details" : "Added via my cool app",
+            "group_id" : group.id,
+            "currency_code" : user.defaultCurrency,
+            "users__0__user_id" : user.id,
+            "users__0__paid_share" : String(amount),
+            "users__0__owed_share" : 0,
+            "users__1__user_id" : otherUser.id,
+            "users__1__paid_share" : 0,
+            "users__1__owed_share" : String(amount),
+            "transaction_method" : "offline"
+        ]
+                
+        _ = client.post("https://secure.splitwise.com/api/v3.0/create_expense", parameters: parameters) { result in
+            print("did the request")
+            switch(result) {
+            case .success( _):
+                success()
+            case .failure(let fail):
+                print(fail)
+            }
         }
     }
 }

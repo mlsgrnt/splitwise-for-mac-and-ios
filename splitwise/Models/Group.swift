@@ -16,4 +16,21 @@ struct Group: Identifiable, Hashable {
     let currencies: [String]
     let members: [User]
     let debts: [Debt]
+    
+    func getBalanceForUser(_ user: User?) -> Double {
+        guard let user = user else {
+            return 0.0
+        }
+        var balance = 0.0
+        for debt in self.debts {
+            if debt.to == user {
+                balance += debt.amount
+            }
+            if debt.from == user {
+                balance -= debt.amount
+            }
+        }
+        
+        return balance.roundedWithTwoDecimalPlaces()
+    }
 }

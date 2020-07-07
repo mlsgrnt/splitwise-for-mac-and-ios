@@ -90,4 +90,21 @@ class SplitwiseModel: ObservableObject {
         }
     }
     
+    // MARK: POST requests
+    func settleUp(amount: Double, group: Group) {
+        guard let user = self.user else {
+            print("User not logged in")
+            return
+        }
+        
+        splitwiseNetworking.httpPostSettleUp(fullAmount: amount, group: group, user: user, success: {
+            // Reset groups
+            self.expenses[group.id] = nil
+            self.groups = nil
+            self.loadGroups()
+        }) { (error) in
+            print("It's all gone wrong :(")
+        }
+    }
+    
 }
