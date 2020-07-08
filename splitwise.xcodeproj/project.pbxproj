@@ -114,6 +114,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		023F6E7B24B64E5500FE02B9 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				02E89B1224B4BF22007CF587 /* DebtView.swift */,
+				02E89B1C24B4E82B007CF587 /* ExpenseRow.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		0265E31324B63949003B976F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +170,7 @@
 				02EC2B2824B47BB9006486AC /* Models */,
 				02EC2B0E24B47A7B006486AC /* macOS */,
 				0265E31324B63949003B976F /* iOS */,
+				023F6E7B24B64E5500FE02B9 /* Shared */,
 				02EC2B0D24B47A7B006486AC /* Products */,
 				0265E32C24B63AB5003B976F /* Frameworks */,
 			);
@@ -227,11 +237,9 @@
 		02EC2B3A24B4A78B006486AC /* Group Detail Subviews */ = {
 			isa = PBXGroup;
 			children = (
-				02E89B1224B4BF22007CF587 /* DebtView.swift */,
 				02E89B1824B4DCAB007CF587 /* ExpensesTableView.swift */,
 				02E89B1E24B4F720007CF587 /* SettleUpView.swift */,
 				02C6D33D24B5F6E20004054E /* AddExpenseView.swift */,
-				02E89B1C24B4E82B007CF587 /* ExpenseRow.swift */,
 			);
 			path = "Group Detail Subviews";
 			sourceTree = "<group>";
