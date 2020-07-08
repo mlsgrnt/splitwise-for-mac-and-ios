@@ -54,24 +54,30 @@ struct ExpensesTableView: View {
             .padding(.trailing, 15.0)
             .padding(.bottom, -5.0)
             
-            if expenses == nil || expenses!.endIndex == 0 {
-                Text("No expenses yet!")
+            if expenses == nil {
+                Text("Loading")
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
             } else {
-                List(){
-                    ForEach(filterToOnlyShowOwed(expenses: expenses!/*, user: splitwiseModel.user*/)) { expense in
-                        ExpenseRow(expense: expense)
+                if expenses!.endIndex == 0 {
+                    Text("No expenses yet!")
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                } else {
+                    List(){
+                        ForEach(filterToOnlyShowOwed(expenses: expenses!/*, user: splitwiseModel.user*/)) { expense in
+                            ExpenseRow(expense: expense)
+                        }
                     }
                 }
             }
+            
         }
-        // Hacks for multipel sheets
-        .background(EmptyView().sheet(isPresented: $settleUpViewVisible) {
-           SettleUpView(group: self.group, isVisible: self.$settleUpViewVisible, amountSent: self.debt).environmentObject(self.splitwiseModel)
-        })
-        .background(EmptyView().sheet(isPresented: $addExpenseVisible) {
-            AddExpenseView(group: self.group!, isVisible: self.$addExpenseVisible).environmentObject(self.splitwiseModel)
-        })
+            // Hacks for multipel sheets
+            .background(EmptyView().sheet(isPresented: $settleUpViewVisible) {
+                SettleUpView(group: self.group, isVisible: self.$settleUpViewVisible, amountSent: self.debt).environmentObject(self.splitwiseModel)
+            })
+            .background(EmptyView().sheet(isPresented: $addExpenseVisible) {
+                AddExpenseView(group: self.group!, isVisible: self.$addExpenseVisible).environmentObject(self.splitwiseModel)
+            })
         
         
     }

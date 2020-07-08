@@ -15,7 +15,7 @@ struct ExpenseRow: View {
     
     var body: some View {
         HStack(alignment: .center) {
-            Text(expense.description)
+            Text(expense.description.capitalized)
                 .font(.subheadline)
             //Divider()
             Text(String(expense.cost.asMoney()))
