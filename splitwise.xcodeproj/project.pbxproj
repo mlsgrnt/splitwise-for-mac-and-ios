@@ -41,7 +41,7 @@
 		02E89B1824B4DCAB007CF587 /* ExpensesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesTableView.swift; sourceTree = "<group>"; };
 		02E89B1C24B4E82B007CF587 /* ExpenseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseRow.swift; sourceTree = "<group>"; };
 		02E89B1E24B4F720007CF587 /* SettleUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettleUpView.swift; sourceTree = "<group>"; };
-		02EC2B0C24B47A7B006486AC /* splitwise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = splitwise.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		02EC2B0C24B47A7B006486AC /* Splitwise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Splitwise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02EC2B0F24B47A7B006486AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02EC2B1124B47A7B006486AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		02EC2B1324B47A80006486AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 		02EC2B0D24B47A7B006486AC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				02EC2B0C24B47A7B006486AC /* splitwise.app */,
+				02EC2B0C24B47A7B006486AC /* Splitwise.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,9 +153,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		02EC2B0B24B47A7B006486AC /* splitwise */ = {
+		02EC2B0B24B47A7B006486AC /* Splitwise for Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 02EC2B1F24B47A80006486AC /* Build configuration list for PBXNativeTarget "splitwise" */;
+			buildConfigurationList = 02EC2B1F24B47A80006486AC /* Build configuration list for PBXNativeTarget "Splitwise for Mac" */;
 			buildPhases = (
 				02EC2B0824B47A7B006486AC /* Sources */,
 				02EC2B0924B47A7B006486AC /* Frameworks */,
@@ -165,13 +165,13 @@
 			);
 			dependencies = (
 			);
-			name = splitwise;
+			name = "Splitwise for Mac";
 			packageProductDependencies = (
 				02EC2B2324B47B7A006486AC /* OAuthSwift */,
 				02EC2B2624B47B94006486AC /* SwiftyJSON */,
 			);
 			productName = splitwise;
-			productReference = 02EC2B0C24B47A7B006486AC /* splitwise.app */;
+			productReference = 02EC2B0C24B47A7B006486AC /* Splitwise.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -206,7 +206,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				02EC2B0B24B47A7B006486AC /* splitwise */,
+				02EC2B0B24B47A7B006486AC /* Splitwise for Mac */,
 			);
 		};
 /* End PBXProject section */
@@ -318,6 +318,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "Splitwise for Mac";
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -371,6 +372,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "Splitwise for Mac";
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -395,8 +397,9 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = mlsgrnt.splitwise;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Splitwise;
 				SWIFT_VERSION = 5.0;
+				VERSION_INFO_FILE = 1.0;
 			};
 			name = Debug;
 		};
@@ -418,8 +421,9 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = mlsgrnt.splitwise;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Splitwise;
 				SWIFT_VERSION = 5.0;
+				VERSION_INFO_FILE = 1.0;
 			};
 			name = Release;
 		};
@@ -435,7 +439,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		02EC2B1F24B47A80006486AC /* Build configuration list for PBXNativeTarget "splitwise" */ = {
+		02EC2B1F24B47A80006486AC /* Build configuration list for PBXNativeTarget "Splitwise for Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02EC2B2024B47A80006486AC /* Debug */,
