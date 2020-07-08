@@ -72,17 +72,16 @@ class SplitwiseModel: ObservableObject {
                 // But it is the only way I've gotten the debt to update...
                 for (index, group) in groups.enumerated() {
                     // Some very sad hacks that will mean pain down the line
-
                     if group.debts.count == 0 {
                         self.groups![index].debts = []
                         continue
                     }
                     if self.groups![index].debts.count == 0 {
-                         self.groups![index].debts.append(group.debts[0])
-                         continue
-                     } else {
-                         self.groups![index].debts[0] = group.debts[0]
-                     }
+                        self.groups![index].debts.append(group.debts[0])
+                        continue
+                    } else {
+                        self.groups![index].debts[0] = group.debts[0]
+                    }
                 }
                 
             }

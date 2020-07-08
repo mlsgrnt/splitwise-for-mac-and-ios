@@ -1,6 +1,6 @@
 # Splitwise MacOS App
 
-Wanted to make a SwiftUI app, and saw that there was no decent native Mac app for [Splitwise](https://secure.splitwise.com/#/dashboard).
+Wanted to make a SwiftUI app, and saw that there was no decent native Mac app for [https://secure.splitwise.com/#/dashboard](Splitwise).
 
 ![](screenshot.png)
 
@@ -19,5 +19,11 @@ Or grab the zip file from the releases page.
 
 #### Since I refuse to pay Apple $99 a year, the app will only open by right clicking it and clicking open.
 
+# iOS App
+Since this is a simple app and all views are written with SwiftUI, I was able to port the app to iOS in just a few hours! Models, as well as a few subviews are entirely shared!
 
-Finally, big thank you to [https://github.com/janwasgint/Cupwise](https://github.com/janwasgint/Cupwise) for both inspiration and guidance with interfacing with the API
+Really good experience although think the small functionality really helped.
+
+![](ios.png)
+
+Would love to release it, but I sadly don’t have $99…

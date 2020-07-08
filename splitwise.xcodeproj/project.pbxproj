@@ -7,6 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		023F6E7E24B64F2E00FE02B9 /* SettleUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023F6E7C24B64ECD00FE02B9 /* SettleUpView.swift */; };
+		0265E31524B63949003B976F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0265E31424B63949003B976F /* AppDelegate.swift */; };
+		0265E31724B63949003B976F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0265E31624B63949003B976F /* SceneDelegate.swift */; };
+		0265E31924B63949003B976F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0265E31824B63949003B976F /* ContentView.swift */; };
+		0265E31B24B6394E003B976F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0265E31A24B6394D003B976F /* Assets.xcassets */; };
+		0265E31E24B6394E003B976F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0265E31D24B6394E003B976F /* Preview Assets.xcassets */; };
+		0265E32124B6394E003B976F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0265E31F24B6394E003B976F /* LaunchScreen.storyboard */; };
+		0265E32624B63A86003B976F /* SplitwiseNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC2B2924B47BD0006486AC /* SplitwiseNetworking.swift */; };
+		0265E32724B63A89003B976F /* SplitwiseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC2B2B24B47BE3006486AC /* SplitwiseModel.swift */; };
+		0265E32824B63A8A003B976F /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC2B2D24B47C27006486AC /* Group.swift */; };
+		0265E32924B63A8C003B976F /* Debt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E89B1024B4BCA4007CF587 /* Debt.swift */; };
+		0265E32A24B63A8E003B976F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC2B2F24B47C2F006486AC /* User.swift */; };
+		0265E32B24B63A90003B976F /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E89B1624B4D065007CF587 /* Expense.swift */; };
+		0265E32E24B63AB5003B976F /* OAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0265E32D24B63AB5003B976F /* OAuthSwift */; };
+		0265E33024B63AB9003B976F /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 0265E32F24B63AB9003B976F /* SwiftyJSON */; };
+		0265E33124B63AFD003B976F /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E89B1424B4C3CC007CF587 /* Helpers.swift */; };
+		0265E33524B63D1D003B976F /* LoggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0265E33324B63CF3003B976F /* LoggedInView.swift */; };
+		0265E33824B63F6D003B976F /* GroupDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0265E33624B63F6A003B976F /* GroupDetailView.swift */; };
+		0265E33924B64252003B976F /* DebtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E89B1224B4BF22007CF587 /* DebtView.swift */; };
+		0265E33C24B642E1003B976F /* ExpensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0265E33A24B642DF003B976F /* ExpensesView.swift */; };
+		0265E33D24B6443C003B976F /* ExpenseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E89B1C24B4E82B007CF587 /* ExpenseRow.swift */; };
+		0265E34124B64541003B976F /* AddExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0265E34024B64541003B976F /* AddExpenseView.swift */; };
 		02C6D33E24B5F6E20004054E /* AddExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6D33D24B5F6E20004054E /* AddExpenseView.swift */; };
 		02E89B1124B4BCA4007CF587 /* Debt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E89B1024B4BCA4007CF587 /* Debt.swift */; };
 		02E89B1324B4BF22007CF587 /* DebtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E89B1224B4BF22007CF587 /* DebtView.swift */; };
@@ -33,6 +55,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		023F6E7C24B64ECD00FE02B9 /* SettleUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettleUpView.swift; sourceTree = "<group>"; };
+		0265E31224B63949003B976F /* Splitwise for iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Splitwise for iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0265E31424B63949003B976F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0265E31624B63949003B976F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0265E31824B63949003B976F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0265E31A24B6394D003B976F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0265E31D24B6394E003B976F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0265E32024B6394E003B976F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0265E32224B6394E003B976F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0265E33324B63CF3003B976F /* LoggedInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInView.swift; sourceTree = "<group>"; };
+		0265E33624B63F6A003B976F /* GroupDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailView.swift; sourceTree = "<group>"; };
+		0265E33A24B642DF003B976F /* ExpensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesView.swift; sourceTree = "<group>"; };
+		0265E34024B64541003B976F /* AddExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseView.swift; sourceTree = "<group>"; };
 		02C6D33D24B5F6E20004054E /* AddExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseView.swift; sourceTree = "<group>"; };
 		02E89B1024B4BCA4007CF587 /* Debt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debt.swift; sourceTree = "<group>"; };
 		02E89B1224B4BF22007CF587 /* DebtView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtView.swift; sourceTree = "<group>"; };
@@ -60,6 +95,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0265E30F24B63949003B976F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0265E33024B63AB9003B976F /* SwiftyJSON in Frameworks */,
+				0265E32E24B63AB5003B976F /* OAuthSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		02EC2B0924B47A7B006486AC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -72,11 +116,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		023F6E7B24B64E5500FE02B9 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				02E89B1224B4BF22007CF587 /* DebtView.swift */,
+				02E89B1C24B4E82B007CF587 /* ExpenseRow.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		0265E31324B63949003B976F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0265E31424B63949003B976F /* AppDelegate.swift */,
+				0265E31624B63949003B976F /* SceneDelegate.swift */,
+				0265E31824B63949003B976F /* ContentView.swift */,
+				0265E33224B63CE7003B976F /* Views */,
+				0265E31A24B6394D003B976F /* Assets.xcassets */,
+				0265E31F24B6394E003B976F /* LaunchScreen.storyboard */,
+				0265E32224B6394E003B976F /* Info.plist */,
+				0265E31C24B6394E003B976F /* Preview Content */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		0265E31C24B6394E003B976F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0265E31D24B6394E003B976F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0265E32C24B63AB5003B976F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0265E33224B63CE7003B976F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0265E33324B63CF3003B976F /* LoggedInView.swift */,
+				0265E33624B63F6A003B976F /* GroupDetailView.swift */,
+				0265E33A24B642DF003B976F /* ExpensesView.swift */,
+				0265E34024B64541003B976F /* AddExpenseView.swift */,
+				023F6E7C24B64ECD00FE02B9 /* SettleUpView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		02EC2B0324B47A7B006486AC = {
 			isa = PBXGroup;
 			children = (
-				02EC2B0E24B47A7B006486AC /* splitwise */,
+				02EC2B2824B47BB9006486AC /* Models */,
+				02EC2B0E24B47A7B006486AC /* macOS */,
+				0265E31324B63949003B976F /* iOS */,
+				023F6E7B24B64E5500FE02B9 /* Shared */,
 				02EC2B0D24B47A7B006486AC /* Products */,
+				0265E32C24B63AB5003B976F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,24 +183,23 @@
 			isa = PBXGroup;
 			children = (
 				02EC2B0C24B47A7B006486AC /* Splitwise.app */,
+				0265E31224B63949003B976F /* Splitwise for iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		02EC2B0E24B47A7B006486AC /* splitwise */ = {
+		02EC2B0E24B47A7B006486AC /* macOS */ = {
 			isa = PBXGroup;
 			children = (
 				02EC2B3924B4A77D006486AC /* Views */,
-				02EC2B2824B47BB9006486AC /* Models */,
 				02EC2B0F24B47A7B006486AC /* AppDelegate.swift */,
-				02E89B1424B4C3CC007CF587 /* Helpers.swift */,
 				02EC2B1324B47A80006486AC /* Assets.xcassets */,
 				02EC2B1824B47A80006486AC /* Main.storyboard */,
 				02EC2B1B24B47A80006486AC /* Info.plist */,
 				02EC2B1C24B47A80006486AC /* splitwise.entitlements */,
 				02EC2B1524B47A80006486AC /* Preview Content */,
 			);
-			path = splitwise;
+			path = macOS;
 			sourceTree = "<group>";
 		};
 		02EC2B1524B47A80006486AC /* Preview Content */ = {
@@ -115,6 +213,7 @@
 		02EC2B2824B47BB9006486AC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				02E89B1424B4C3CC007CF587 /* Helpers.swift */,
 				02EC2B2924B47BD0006486AC /* SplitwiseNetworking.swift */,
 				02EC2B2B24B47BE3006486AC /* SplitwiseModel.swift */,
 				02EC2B2D24B47C27006486AC /* Group.swift */,
@@ -141,11 +240,9 @@
 		02EC2B3A24B4A78B006486AC /* Group Detail Subviews */ = {
 			isa = PBXGroup;
 			children = (
-				02E89B1224B4BF22007CF587 /* DebtView.swift */,
 				02E89B1824B4DCAB007CF587 /* ExpensesTableView.swift */,
 				02E89B1E24B4F720007CF587 /* SettleUpView.swift */,
 				02C6D33D24B5F6E20004054E /* AddExpenseView.swift */,
-				02E89B1C24B4E82B007CF587 /* ExpenseRow.swift */,
 			);
 			path = "Group Detail Subviews";
 			sourceTree = "<group>";
@@ -153,6 +250,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0265E31124B63949003B976F /* Splitwise for iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0265E32524B6394E003B976F /* Build configuration list for PBXNativeTarget "Splitwise for iOS" */;
+			buildPhases = (
+				0265E30E24B63949003B976F /* Sources */,
+				0265E30F24B63949003B976F /* Frameworks */,
+				0265E31024B63949003B976F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Splitwise for iOS";
+			packageProductDependencies = (
+				0265E32D24B63AB5003B976F /* OAuthSwift */,
+				0265E32F24B63AB9003B976F /* SwiftyJSON */,
+			);
+			productName = EasySplitwise;
+			productReference = 0265E31224B63949003B976F /* Splitwise for iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		02EC2B0B24B47A7B006486AC /* Splitwise for Mac */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 02EC2B1F24B47A80006486AC /* Build configuration list for PBXNativeTarget "Splitwise for Mac" */;
@@ -184,6 +302,9 @@
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = mlsgrnt;
 				TargetAttributes = {
+					0265E31124B63949003B976F = {
+						CreatedOnToolsVersion = 11.5;
+					};
 					02EC2B0B24B47A7B006486AC = {
 						CreatedOnToolsVersion = 11.5;
 					};
@@ -207,11 +328,22 @@
 			projectRoot = "";
 			targets = (
 				02EC2B0B24B47A7B006486AC /* Splitwise for Mac */,
+				0265E31124B63949003B976F /* Splitwise for iOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0265E31024B63949003B976F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0265E32124B6394E003B976F /* LaunchScreen.storyboard in Resources */,
+				0265E31E24B6394E003B976F /* Preview Assets.xcassets in Resources */,
+				0265E31B24B6394E003B976F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		02EC2B0A24B47A7B006486AC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -225,6 +357,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0265E30E24B63949003B976F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0265E32624B63A86003B976F /* SplitwiseNetworking.swift in Sources */,
+				0265E33924B64252003B976F /* DebtView.swift in Sources */,
+				0265E31524B63949003B976F /* AppDelegate.swift in Sources */,
+				0265E33C24B642E1003B976F /* ExpensesView.swift in Sources */,
+				0265E32924B63A8C003B976F /* Debt.swift in Sources */,
+				0265E33124B63AFD003B976F /* Helpers.swift in Sources */,
+				0265E31724B63949003B976F /* SceneDelegate.swift in Sources */,
+				023F6E7E24B64F2E00FE02B9 /* SettleUpView.swift in Sources */,
+				0265E33D24B6443C003B976F /* ExpenseRow.swift in Sources */,
+				0265E32A24B63A8E003B976F /* User.swift in Sources */,
+				0265E32824B63A8A003B976F /* Group.swift in Sources */,
+				0265E32B24B63A90003B976F /* Expense.swift in Sources */,
+				0265E34124B64541003B976F /* AddExpenseView.swift in Sources */,
+				0265E32724B63A89003B976F /* SplitwiseModel.swift in Sources */,
+				0265E33524B63D1D003B976F /* LoggedInView.swift in Sources */,
+				0265E31924B63949003B976F /* ContentView.swift in Sources */,
+				0265E33824B63F6D003B976F /* GroupDetailView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		02EC2B0824B47A7B006486AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -253,6 +409,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		0265E31F24B6394E003B976F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0265E32024B6394E003B976F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		02EC2B1824B47A80006486AC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -264,6 +428,51 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0265E32324B6394E003B976F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = ZH497CA8QC;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mlsgrnt.splitwise;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		0265E32424B6394E003B976F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = ZH497CA8QC;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mlsgrnt.splitwise;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		02EC2B1D24B47A80006486AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -383,14 +592,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = splitwise/splitwise.entitlements;
+				CODE_SIGN_ENTITLEMENTS = macOS/splitwise.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"splitwise/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"macOS/Preview Content\"";
 				DEVELOPMENT_TEAM = ZH497CA8QC;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = splitwise/Info.plist;
+				INFOPLIST_FILE = macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -407,14 +616,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = splitwise/splitwise.entitlements;
+				CODE_SIGN_ENTITLEMENTS = macOS/splitwise.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"splitwise/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"macOS/Preview Content\"";
 				DEVELOPMENT_TEAM = ZH497CA8QC;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = splitwise/Info.plist;
+				INFOPLIST_FILE = macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -430,6 +639,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0265E32524B6394E003B976F /* Build configuration list for PBXNativeTarget "Splitwise for iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0265E32324B6394E003B976F /* Debug */,
+				0265E32424B6394E003B976F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		02EC2B0724B47A7B006486AC /* Build configuration list for PBXProject "splitwise" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -470,6 +688,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0265E32D24B63AB5003B976F /* OAuthSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02EC2B2224B47B7A006486AC /* XCRemoteSwiftPackageReference "OAuthSwift" */;
+			productName = OAuthSwift;
+		};
+		0265E32F24B63AB9003B976F /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02EC2B2524B47B94006486AC /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
 		02EC2B2324B47B7A006486AC /* OAuthSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 02EC2B2224B47B7A006486AC /* XCRemoteSwiftPackageReference "OAuthSwift" */;

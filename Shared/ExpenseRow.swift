@@ -17,7 +17,7 @@ struct ExpenseRow: View {
         HStack(alignment: .center) {
             Text(expense.description.capitalized)
                 .font(.subheadline)
-            //Divider()
+
             Text(String(expense.cost.asMoney()))
                 .font(.caption)
                 .foregroundColor(Color.gray)
