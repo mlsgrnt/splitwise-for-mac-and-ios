@@ -9,7 +9,7 @@ I threw this together in about a day. It’s not perfect (I think it will crash 
 Either way the app shows you all your expenses across all your groups, and allows you to add expenses or settle up.
 
 ### To Install
-`brew tap mlsgrnt/splitwise-for-mac`
+`brew tap mlsgrnt/splitwise-for-mac-and-ios`
 
 and then
 
@@ -24,6 +24,6 @@ Since this is a simple app and all views are written with SwiftUI, I was able to
 
 Really good experience although think the small functionality really helped.
 
-![](ios.png)
+![](ios.png | width=100)
 
 Would love to release it, but I sadly don’t have $99…
