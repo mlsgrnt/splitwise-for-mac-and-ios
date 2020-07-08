@@ -18,3 +18,12 @@ and then
 Or grab the zip file from the releases page. 
 
 #### Since I refuse to pay Apple $99 a year, the app will only open by right clicking it and clicking open.
+
+# iOS App
+Since this is a simple app and all views are written with SwiftUI, I was able to port the app to iOS in just a few hours! Models, as well as a few subviews are entirely shared!
+
+Really good experience although think the small functionality really helped.
+
+![](ios.png)
+
+Would love to release it, but I sadly don’t have $99…
