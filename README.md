@@ -18,3 +18,6 @@ and then
 Or grab the zip file from the releases page. 
 
 #### Since I refuse to pay Apple $99 a year, the app will only open by right clicking it and clicking open.
+
+
+Finally, big thank you to [https://github.com/janwasgint/Cupwise](https://github.com/janwasgint/Cupwise) for both inspiration and guidance with interfacing with the API
