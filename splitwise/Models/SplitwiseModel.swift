@@ -71,7 +71,12 @@ class SplitwiseModel: ObservableObject {
                 // This is weird and annoying and doesn't feel good
                 // But it is the only way I've gotten the debt to update...
                 for (index, group) in groups.enumerated() {
+                    // Some very sad hacks that will mean pain down the line
                     if self.groups![index].debts.count == 0 {
+                        continue
+                    }
+                    if group.debts.count == 0 {
+                        self.groups![index].debts = []
                         continue
                     }
                     self.groups![index].debts[0] = group.debts[0]
@@ -115,6 +120,21 @@ class SplitwiseModel: ObservableObject {
             self.loadGroups()
         }) { (error) in
             print("It's all gone wrong :(")
+        }
+    }
+    func addExpense(amount: Double, description: String, group: Group) {
+        guard let user = self.user else {
+            print("User not logged in")
+            return
+        }
+        
+        splitwiseNetworking.httpPostAddExpense(amount: amount, group: group, user: user, description: description, success: {
+
+            self.expenses[group.id] = nil
+            self.loadExpenses(group: group)
+            self.loadGroups()
+        }) { (error) in
+            print("where did it all go wrong...")
         }
     }
     

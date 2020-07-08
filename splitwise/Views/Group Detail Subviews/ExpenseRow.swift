@@ -14,10 +14,10 @@ struct ExpenseRow: View {
     let expense: Expense
     
     var body: some View {
-        HStack {
+        HStack(alignment: .center) {
             Text(expense.description)
                 .font(.subheadline)
-            Divider()
+            //Divider()
             Text(String(expense.cost.asMoney()))
                 .font(.caption)
                 .foregroundColor(Color.gray)

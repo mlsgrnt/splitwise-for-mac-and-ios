@@ -23,3 +23,14 @@ extension Double {
         return formattedTipAmount
     }
 }
+
+// https://stackoverflow.com/questions/30315723/check-if-string-is-a-valid-double-value-in-swift
+extension String {
+     struct NumFormatter {
+         static let instance = NumberFormatter()
+     }
+
+     var doubleValue: Double? {
+         return NumFormatter.instance.number(from: self)?.doubleValue
+     }
+}

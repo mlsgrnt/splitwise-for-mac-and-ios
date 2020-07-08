@@ -25,6 +25,7 @@ struct ExpensesTableView: View {
     let group: Group?
     
     @State var settleUpViewVisible = false
+    @State var addExpenseVisible = false
     @EnvironmentObject var splitwiseModel: SplitwiseModel
     
     
@@ -43,7 +44,9 @@ struct ExpensesTableView: View {
                         Text("Settle Up")
                     }
                 }
-                Button(action: {}) {
+                Button(action: {
+                    self.addExpenseVisible = true
+                }) {
                     Text("+")
                 }
             }
@@ -62,9 +65,13 @@ struct ExpensesTableView: View {
                 }
             }
         }
-        .sheet(isPresented: $settleUpViewVisible) {
-            SettleUpView(group: self.group, isVisible: self.$settleUpViewVisible, amountSent: self.debt).environmentObject(self.splitwiseModel)
-         }
+        // Hacks for multipel sheets
+        .background(EmptyView().sheet(isPresented: $settleUpViewVisible) {
+           SettleUpView(group: self.group, isVisible: self.$settleUpViewVisible, amountSent: self.debt).environmentObject(self.splitwiseModel)
+        })
+        .background(EmptyView().sheet(isPresented: $addExpenseVisible) {
+            AddExpenseView(group: self.group!, isVisible: self.$addExpenseVisible).environmentObject(self.splitwiseModel)
+        })
         
         
     }

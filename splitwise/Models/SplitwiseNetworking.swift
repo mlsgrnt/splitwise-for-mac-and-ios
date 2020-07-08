@@ -260,7 +260,50 @@ class SplitwiseNetworking {
         ]
                 
         _ = client.post("https://secure.splitwise.com/api/v3.0/create_expense", parameters: parameters) { result in
-            print("did the request")
+            switch(result) {
+            case .success( _):
+                success()
+            case .failure(let fail):
+                print(fail)
+            }
+        }
+    }
+    
+    func httpPostAddExpense(amount: Double, group: Group, user: User, description: String, success: @escaping () -> Void, failure: @escaping (String) -> Void) {
+        guard let client = self.client else {
+            failure("Not authorized. Call authorize(...) before using")
+            return
+        }
+        
+        // Find the id of the other person
+        let otherUserWrapped = group.members.first { (u) -> Bool in
+            return u != user
+        }
+        
+        guard let otherUser = otherUserWrapped else {
+            // Didn't work, guess that's a fail
+            return
+        }
+        
+        let perPersonAmount = amount / 2
+        
+        let parameters: OAuthSwift.Parameters = [
+            "payment" : String(false),
+            "cost" : String(amount),
+            "description" : description,
+            "details" : "Added via my cool app",
+            "group_id" : group.id,
+            "currency_code" : user.defaultCurrency,
+            "users__0__user_id" : user.id,
+            "users__0__paid_share" : String(amount),
+            "users__0__owed_share" : perPersonAmount,
+            "users__1__user_id" : otherUser.id,
+            "users__1__paid_share" : 0,
+            "users__1__owed_share" : perPersonAmount,
+            "transaction_method" : "offline"
+        ]
+                
+        _ = client.post("https://secure.splitwise.com/api/v3.0/create_expense", parameters: parameters) { result in
             switch(result) {
             case .success( _):
                 success()
