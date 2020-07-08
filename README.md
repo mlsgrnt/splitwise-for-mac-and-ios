@@ -24,6 +24,6 @@ Since this is a simple app and all views are written with SwiftUI, I was able to
 
 Really good experience although think the small functionality really helped.
 
-![](ios.png | width=100)
+<img src="ios.png" width="300">
 
 Would love to release it, but I sadly don’t have $99…
