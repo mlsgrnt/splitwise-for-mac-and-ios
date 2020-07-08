@@ -9,10 +9,12 @@ I threw this together in about a day. It’s not perfect (I think it will crash 
 Either way the app shows you all your expenses across all your groups, and allows you to add expenses or settle up.
 
 ### To Install
-`brew tap mlsgrnt/splitwise-for-mac https://github.com/mlsgrnt/splitwise-for-mac`
+`brew tap mlsgrnt/splitwise-for-mac`
 
 and then
 
 `brew cask install splitwise-for-mac`
 
-Or grab the zip file from the releases page. Since I refuse to pay Apple $99 a year, the app will only open by right clicking it and clicking open.
+Or grab the zip file from the releases page. 
+
+#### Since I refuse to pay Apple $99 a year, the app will only open by right clicking it and clicking open.
