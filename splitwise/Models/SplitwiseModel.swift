@@ -65,7 +65,20 @@ class SplitwiseModel: ObservableObject {
     
     func loadGroups() {
         splitwiseNetworking.httpGetGroupsWithMembers(success: { (groups: [Group]) in
-            self.groups = groups
+            if self.groups == nil || self.groups == [] {
+                self.groups = groups
+            } else {
+                // This is weird and annoying and doesn't feel good
+                // But it is the only way I've gotten the debt to update...
+                for (index, group) in groups.enumerated() {
+                    if self.groups![index].debts.count == 0 {
+                        continue
+                    }
+                    self.groups![index].debts[0] = group.debts[0]
+                }
+                
+            }
+            
         }) { (err: String) in
             print(err)
         }
@@ -99,9 +112,7 @@ class SplitwiseModel: ObservableObject {
         
         splitwiseNetworking.httpPostSettleUp(fullAmount: amount, group: group, user: user, success: {
             // Reset groups
-            self.expenses[group.id] = nil
-            //self.loadGroups()
-            self.groups![2].name="fart"
+            self.loadGroups()
         }) { (error) in
             print("It's all gone wrong :(")
         }

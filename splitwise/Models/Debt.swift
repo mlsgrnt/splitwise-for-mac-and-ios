@@ -12,7 +12,7 @@ struct Debt: Identifiable, Hashable {
     
     let from: User
     let to: User
-    let amount: Double
+    var amount: Double
     
     var friendly: String { return "\(from.firstName) owes \(to.firstName)"}
     func colorForUser(user: User?) -> Color {
