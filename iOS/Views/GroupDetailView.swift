@@ -18,9 +18,19 @@ struct GroupDetailView: View {
     var body: some View {
         VStack(alignment: .trailing) {
             if splitwiseModel.user != nil {
-                DebtView(debts: group.debts, myUserId: splitwiseModel.user!.id).padding()
+                VStack(alignment: .trailing) {
+                    DebtView(debts: group.debts, myUserId: splitwiseModel.user!.id)
+                    if(group.getBalanceForUser(splitwiseModel.user) < 0) {
+                        Button(action: {
+                            self.settleUpViewVisible = true
+                        }) {
+                            Text("Settle Up")
+                        }.padding(.top)
+                    }
+                }.padding()
+                
             }
-            ExpensesView(expenses: splitwiseModel.expenses[group.id], debt: group.getBalanceForUser(splitwiseModel.user), group: group)
+            ExpensesView(expenses: splitwiseModel.expenses[group.id], group: group)
             Spacer()
         }
             
@@ -35,7 +45,10 @@ struct GroupDetailView: View {
             }
         )
             .background(EmptyView().sheet(isPresented: $addExpenseVisible) {
-            AddExpenseView(group: self.group, isVisible: self.$addExpenseVisible).environmentObject(self.splitwiseModel)
-        })
+                AddExpenseView(group: self.group, isVisible: self.$addExpenseVisible).environmentObject(self.splitwiseModel)
+            })
+            .background(EmptyView().sheet(isPresented: $settleUpViewVisible) {
+                SettleUpView(group: self.group, isVisible: self.$settleUpViewVisible, amountSent: self.group.getBalanceForUser(self.splitwiseModel.user)).environmentObject(self.splitwiseModel)
+            })
     }
 }

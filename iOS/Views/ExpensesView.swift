@@ -23,7 +23,6 @@ func filterToOnlyShowOwed(expenses: [Expense]/*, user: User?*/) -> [Expense] {
 
 struct ExpensesView: View {
     let expenses: [Expense]?
-    let debt: Double
     let group: Group?
     
     var body: some View {

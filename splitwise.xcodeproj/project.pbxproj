@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		023F6E7E24B64F2E00FE02B9 /* SettleUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023F6E7C24B64ECD00FE02B9 /* SettleUpView.swift */; };
 		0265E31524B63949003B976F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0265E31424B63949003B976F /* AppDelegate.swift */; };
 		0265E31724B63949003B976F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0265E31624B63949003B976F /* SceneDelegate.swift */; };
 		0265E31924B63949003B976F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0265E31824B63949003B976F /* ContentView.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		023F6E7C24B64ECD00FE02B9 /* SettleUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettleUpView.swift; sourceTree = "<group>"; };
 		0265E31224B63949003B976F /* Splitwise for iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Splitwise for iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0265E31424B63949003B976F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0265E31624B63949003B976F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				0265E33624B63F6A003B976F /* GroupDetailView.swift */,
 				0265E33A24B642DF003B976F /* ExpensesView.swift */,
 				0265E34024B64541003B976F /* AddExpenseView.swift */,
+				023F6E7C24B64ECD00FE02B9 /* SettleUpView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				0265E32924B63A8C003B976F /* Debt.swift in Sources */,
 				0265E33124B63AFD003B976F /* Helpers.swift in Sources */,
 				0265E31724B63949003B976F /* SceneDelegate.swift in Sources */,
+				023F6E7E24B64F2E00FE02B9 /* SettleUpView.swift in Sources */,
 				0265E33D24B6443C003B976F /* ExpenseRow.swift in Sources */,
 				0265E32A24B63A8E003B976F /* User.swift in Sources */,
 				0265E32824B63A8A003B976F /* Group.swift in Sources */,

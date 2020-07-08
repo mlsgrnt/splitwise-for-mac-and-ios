@@ -20,7 +20,7 @@ struct AddExpenseView: View {
     
     var body: some View {
         NavigationView {
-            List{
+            List {
                 VStack(alignment: .leading) {
                     TextField("Description", text: $description)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -33,10 +33,11 @@ struct AddExpenseView: View {
                     Spacer()
                 }
                 .padding(.all, 5)
-                .font(Font.system(size: 30, design: .default))
-                    
+                .font(Font.system(size: 20, design: .default))
                 .padding()
-            }.listStyle(GroupedListStyle())
+            }
+            .padding(5.0)
+            .listStyle(GroupedListStyle())
                 .navigationBarTitle(Text("Add Shared Expense"))
                 .navigationBarItems(leading:
                     Button(action: {
