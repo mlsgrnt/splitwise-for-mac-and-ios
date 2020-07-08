@@ -14,7 +14,7 @@ struct ContentView: View {
     @ViewBuilder
     var body: some View {
         if splitwiseModel.loggedIn {
-            LoggedInView(user: splitwiseModel.user, groups: splitwiseModel.groups)
+            LoggedInView(user: splitwiseModel.user)
         } else {
             VStack {
                 Text("I am not logged in")

@@ -10,13 +10,12 @@ import SwiftUI
 
 struct LoggedInView: View {
     let user: User?
-    let groups: [Group]?
     
     @State private var selectedGroup: Group?
     
     var body: some View {
         NavigationView {
-            GroupListView(groups: groups ?? [], selectedGroup: $selectedGroup)
+            GroupListView(selectedGroup: $selectedGroup)
             Text("Choose one").frame(minWidth: 500, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
         }
         .frame(maxWidth: .infinity,maxHeight: .infinity)

@@ -10,7 +10,7 @@ import SwiftUI
 
 struct GroupDetailView: View {
     @EnvironmentObject var splitwiseModel: SplitwiseModel
-    let group: Group
+    @ObservedObject var group: Group
     
     var body: some View {
         VStack {

@@ -100,7 +100,8 @@ class SplitwiseModel: ObservableObject {
         splitwiseNetworking.httpPostSettleUp(fullAmount: amount, group: group, user: user, success: {
             // Reset groups
             self.expenses[group.id] = nil
-            self.loadGroups()
+            //self.loadGroups()
+            self.groups![2].name="fart"
         }) { (error) in
             print("It's all gone wrong :(")
         }

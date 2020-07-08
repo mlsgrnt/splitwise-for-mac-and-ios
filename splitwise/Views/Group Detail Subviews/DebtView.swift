@@ -36,7 +36,7 @@ fileprivate func getOtherPerson(debts: [Debt], myUserId: Int)->User? {
 }
 
 struct DebtView: View {
-    let debts: [Debt]?
+    var debts: [Debt]?
     let myUserId: Int
     
     @ViewBuilder
@@ -77,15 +77,4 @@ struct DebtView: View {
         }
     }
     
-}
-
-struct DebtView_Previews: PreviewProvider {
-    static var previews: some View {
-        HStack {
-            DebtView(debts: [Debt(from: User(id: 1, firstName: "asf", lastName: "asdf", email: "asdf", defaultCurrency: "asdf"), to: User(id:2,firstName: "someone else", lastName: "wow", email: "asdf", defaultCurrency: "wowow"), amount: 12.9)], myUserId: 1)
-            DebtView(debts: [], myUserId: 1)
-            
-        }
-        
-    }
 }

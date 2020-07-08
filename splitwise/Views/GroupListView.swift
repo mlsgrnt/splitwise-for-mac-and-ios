@@ -9,16 +9,15 @@
 import SwiftUI
 
 struct GroupListView: View {
-    let groups: [Group]
+    @EnvironmentObject var splitwiseModel: SplitwiseModel
     @Binding var selectedGroup: Group?
-    
     
     var body: some View {
         VStack {
             Spacer()
             List(selection: $selectedGroup) {
                 Section(header: Text("Your Groups")) {
-                    ForEach(groups) { group in
+                    ForEach(splitwiseModel.groups ?? []) { group in
                         NavigationLink(destination: GroupDetailView(group: group)) {
                             Text(group.name)
                         }
