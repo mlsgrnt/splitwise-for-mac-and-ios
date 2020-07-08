@@ -1,6 +1,6 @@
 # Splitwise MacOS App
 
-Wanted to make a SwiftUI app, and saw that there was no decent native Mac app for [https://secure.splitwise.com/#/dashboard](Splitwise).
+Wanted to make a SwiftUI app, and saw that there was no decent native Mac app for [Splitwise](https://secure.splitwise.com/#/dashboard).
 
 ![](screenshot.png)
 
