@@ -11,7 +11,7 @@ import SwiftUI
 struct GroupListView: View {
     let groups: [Group]
     @Binding var selectedGroup: Group?
-        
+    
     
     var body: some View {
         VStack {

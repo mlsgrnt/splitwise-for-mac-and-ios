@@ -10,23 +10,23 @@ import SwiftUI
 
 struct GroupDetailView: View {
     @EnvironmentObject var splitwiseModel: SplitwiseModel
-    let group: Group?
+    let group: Group
     
     var body: some View {
         VStack {
             HStack {
                 VStack {
                     HStack {
-                        Text(group?.name ?? "Select a group")
+                        Text(group.name)
                             .font(.largeTitle)
                             .fontWeight(.bold)
                         Spacer()
                     }
-                    if group?.members != nil && group!.members.endIndex > 0 {
+                    if group.members.endIndex > 0 {
                         HStack {
                             Text("Members:")
                                 .fontWeight(.medium)
-                            ForEach(group?.members ?? []) { member in
+                            ForEach(group.members) { member in
                                 Text(member.name)
                             }
                             Spacer()
@@ -36,8 +36,8 @@ struct GroupDetailView: View {
                     
                 }
                 VStack{
-                    if splitwiseModel.user != nil && group != nil {
-                        DebtView(debts: group!.debts, myUserId: splitwiseModel.user!.id)
+                    if splitwiseModel.user != nil {
+                        DebtView(debts: group.debts, myUserId: splitwiseModel.user!.id)
                     }
                 }
                 
@@ -45,25 +45,14 @@ struct GroupDetailView: View {
             
             
             Divider()
-            if group != nil && (splitwiseModel.expenses[group!.id] != nil) && group!.debts.count > 0 {
-                ExpensesTableView(expenses: splitwiseModel.expenses[group!.id]!, debt: group!.getBalanceForUser(splitwiseModel.user), group: group)
-            }
+                ExpensesTableView(expenses: splitwiseModel.expenses[group.id], debt: group.getBalanceForUser(splitwiseModel.user), group: group)
             
             Spacer()
             
         }
         .frame(minWidth: 500, maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
         .onAppear() {
-            if let group = self.group {
-                self.splitwiseModel.loadExpenses(group: group)
-            }
+            self.splitwiseModel.loadExpenses(group: self.group)
         }
-    }
-}
-
-
-struct GroupDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        GroupDetailView(group: Group(id: 1, name: "wow group", currencies: [], members: [User(id: 1, firstName: "wow", lastName: "ooo", email: " ", defaultCurrency: "asdf")], debts: []))
     }
 }

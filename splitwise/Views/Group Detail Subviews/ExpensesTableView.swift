@@ -20,7 +20,7 @@ func filterToOnlyShowOwed(expenses: [Expense]/*, user: User?*/) -> [Expense] {
 }
 
 struct ExpensesTableView: View {
-    let expenses: [Expense]
+    let expenses: [Expense]?
     let debt: Double
     let group: Group?
     
@@ -51,12 +51,12 @@ struct ExpensesTableView: View {
             .padding(.trailing, 15.0)
             .padding(.bottom, -5.0)
             
-            if expenses.endIndex == 0 {
+            if expenses == nil || expenses!.endIndex == 0 {
                 Text("No expenses yet!")
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
             } else {
                 List(){
-                    ForEach(filterToOnlyShowOwed(expenses: expenses/*, user: splitwiseModel.user*/)) { expense in
+                    ForEach(filterToOnlyShowOwed(expenses: expenses!/*, user: splitwiseModel.user*/)) { expense in
                         ExpenseRow(expense: expense)
                     }
                 }

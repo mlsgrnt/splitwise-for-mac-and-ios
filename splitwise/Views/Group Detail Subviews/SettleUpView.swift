@@ -47,7 +47,6 @@ struct SettleUpView: View {
                 
                 Button(action: {
                     self.splitwiseModel.settleUp(amount: self.amountSent, group: self.group!)
-                    self.splitwiseModel.selectedGroup = nil
                     // Hide modal
                     self.isVisible = false
                 }) {
