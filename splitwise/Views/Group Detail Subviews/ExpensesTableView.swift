@@ -16,6 +16,8 @@ func filterToOnlyShowOwed(expenses: [Expense]/*, user: User?*/) -> [Expense] {
     
     return expenses.filter { (expense) -> Bool in
         return !expense.paid
+    }.sorted { (l, r) -> Bool in
+        l.date > r.date
     }
 }
 
